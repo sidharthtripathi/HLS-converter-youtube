@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "amqplib": "^0.10.4",
+    "node-appwrite": "^13.0.0"
+  }
+}
