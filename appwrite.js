@@ -38,6 +38,9 @@ async function uploadFiles(folderPath,bucketId){
         throw error
     }
 }
+async function uploadThumbnail(videoId){
+    const res = await storage.createFile("6681469e0006135ff29a",videoId+".jpg",InputFile.fromPath(path.join(__dirname,`inputVideos/thumbnails`,videoId+".jpg"),videoId+".jpg"))
+    console.log(res)
+}
 
-
-module.exports = {downloadFile,uploadFiles}
+module.exports = {downloadFile,uploadFiles,uploadThumbnail}
